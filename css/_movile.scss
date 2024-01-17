@@ -1,44 +1,90 @@
 //*** VISTA MOVIL INDEX
-@media (max-width:360px) {
+@media (max-width: 585px) {
     .container{
-        max-width: 360px;
+        width: 100%;
         height: auto;
+        grid-template-areas: 
+            'header'
+            'main'
+            'foot';
 
         .container__header{
-            max-width: 360px;
+            width: 100%;
+            grid-area: header;
+            display: flex;
             flex-direction: column;
-            
+
             .header__social{
                 flex-basis: 100%;
-                margin-bottom: 3rem;
-
+                
                 .social__options{
-                    width: 100%;
-                    margin-top: 0.5rem;
                     display: flex;
                     flex-direction: row;
-                    flex-wrap: wrap;
+                    margin: 0;
 
                     .social___link{
-                        flex-basis: calc(90%/3);
+                        margin: 0;
+                        padding-top: 2rem;
 
-                        span{
-                            opacity: 0;
-                            font-size: 0px;
+                        a{
+                            span{
+                                display: none;
+                            }
                         }
                     }
                 }
             }
 
-            .header__logo{
-                flex-basis: 100%;
-                padding: 0;
-                margin: 0 auto;
-
-                .logo__box{
-                    margin: 0px auto !important;
+            .header__menu{
+                .menu__options{
+                    margin-top: 1rem;
+                    padding-bottom: 3rem;
                 }
             }
+        }
+
+        .container__main{
+            width: 90%;
+            grid-area: main;
+
+            .main__content{
+                width: 100%;
+
+                .main__subtitle{
+                    font-size: 3.5rem;
+                }
+            }
+        }
+
+        .container__foot{
+            height: auto;
+            width: 100%;
+
+            .foot__content{
+                flex-basis: 100%;
+
+                h3{
+                    margin-top: 2rem;
+                }
+            }
+        }
+    }
+
+    .main__pilotos{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        .pilotos__tags{
+            width: 70%;
+            margin: 0 auto;
+            margin-bottom: 5rem;
+        }
+    }
+
+    .main__form{
+        input[type="submit"]{
+            width: 50%;
         }
     }
 }

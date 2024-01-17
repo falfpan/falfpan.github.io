@@ -247,40 +247,69 @@
   height: 165px;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 585px) {
   .container {
-    max-width: 360px;
+    width: 100%;
     height: auto;
+    grid-template-areas: "header" "main" "foot";
   }
   .container .container__header {
-    max-width: 360px;
+    width: 100%;
+    grid-area: header;
+    display: flex;
     flex-direction: column;
   }
   .container .container__header .header__social {
     flex-basis: 100%;
-    margin-bottom: 3rem;
   }
   .container .container__header .header__social .social__options {
-    width: 100%;
-    margin-top: 0.5rem;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    margin: 0;
   }
   .container .container__header .header__social .social__options .social___link {
-    flex-basis: 30%;
+    margin: 0;
+    padding-top: 2rem;
   }
-  .container .container__header .header__social .social__options .social___link span {
-    opacity: 0;
-    font-size: 0px;
+  .container .container__header .header__social .social__options .social___link a span {
+    display: none;
   }
-  .container .container__header .header__logo {
+  .container .container__header .header__menu .menu__options {
+    margin-top: 1rem;
+    padding-bottom: 3rem;
+  }
+  .container .container__main {
+    width: 90%;
+    grid-area: main;
+  }
+  .container .container__main .main__content {
+    width: 100%;
+  }
+  .container .container__main .main__content .main__subtitle {
+    font-size: 3.5rem;
+  }
+  .container .container__foot {
+    height: auto;
+    width: 100%;
+  }
+  .container .container__foot .foot__content {
     flex-basis: 100%;
-    padding: 0;
-    margin: 0 auto;
   }
-  .container .container__header .header__logo .logo__box {
-    margin: 0px auto !important;
+  .container .container__foot .foot__content h3 {
+    margin-top: 2rem;
+  }
+  .main__pilotos {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .main__pilotos .pilotos__tags {
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+  }
+  .main__form input[type=submit] {
+    width: 50%;
   }
 }
 

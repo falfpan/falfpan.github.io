@@ -30,7 +30,8 @@ $color-primary: #fe9900;
 .container {
     height: auto;
     display: grid;
-    grid-template-areas: "header" "header"
+    grid-template-areas: 
+        "header" "header"
         "main" "main"
         "foot" "foot";
 
