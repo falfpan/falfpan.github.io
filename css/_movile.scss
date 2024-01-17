@@ -1,0 +1,44 @@
+//*** VISTA MOVIL INDEX
+@media (max-width:360px) {
+    .container{
+        max-width: 360px;
+        height: auto;
+
+        .container__header{
+            max-width: 360px;
+            flex-direction: column;
+            
+            .header__social{
+                flex-basis: 100%;
+                margin-bottom: 3rem;
+
+                .social__options{
+                    width: 100%;
+                    margin-top: 0.5rem;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+
+                    .social___link{
+                        flex-basis: calc(90%/3);
+
+                        span{
+                            opacity: 0;
+                            font-size: 0px;
+                        }
+                    }
+                }
+            }
+
+            .header__logo{
+                flex-basis: 100%;
+                padding: 0;
+                margin: 0 auto;
+
+                .logo__box{
+                    margin: 0px auto !important;
+                }
+            }
+        }
+    }
+}
